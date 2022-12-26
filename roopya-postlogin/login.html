@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!--fonts css-->
+    <link href="css/fonts.css" rel="stylesheet" />
+    <!--custom common css-->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--custom login page css-->
+    <link href="css/loginpage.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid rp-container">
+        <a class="navbar-brand" href="#"
+          ><img src="images/logo.png" alt="logo"
+        /></a>
+      </div>
+    </header>
+    <!--header ends-->
+    <main class="login-wrapper">
+      <div class="col-left rp-container flex-type1">
+        <div class="heading-block">
+          <h2 class="section-heading">Welcome to Roopya</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <ul>
+          <li>
+            <span class="icon-holder"
+              ><img src="images/icon-cibil.png" alt="" /></span
+            ><label>Credit Score</label>
+          </li>
+          <li>
+            <span class="icon-holder"
+              ><img src="images/icon-rupee.png" alt="" /></span
+            ><label>Pre-qualified Offers</label>
+          </li>
+          <li>
+            <span class="icon-holder"
+              ><img src="images/icon-eligibility.png" alt="" /></span
+            ><label>Loan amount eligibility</label>
+          </li>
+          <li>
+            <span class="icon-holder"
+              ><img src="images/icon-switch.png" alt="" /></span
+            ><label>100% Digital Process</label>
+          </li>
+        </ul>
+        <img class="cibil-main img-fluid" src="images/cibil-man.png" alt="" />
+      </div>
+      <div class="col-right rp-container">
+        <div id="login-number-box" class="flex-type1">
+          <a href="javascript:history.back()" class="link-back login-link-back"
+            >&#129044; Back</a
+          >
+          <div class="login-form-content">
+            <div class="heading-block">
+              <h2 class="section-heading">Hey there! 👋</h2>
+              <p>Please login to view account details</p>
+            </div>
+
+            <form id="login-form" class="rp-form needs-validation" novalidate>
+              <div class="form-fields-content">
+                <div class="form-group">
+                  <label for="MobileNumber" class="form-label"
+                    >Enter 10 digit mobile number</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="MobileNumber"
+                    name="MobileNumber"
+                    maxlength="10"
+                    minlength="10"
+                    required
+                    placeholder="Enter 10 digit mobile number"
+                    onkeypress="return numberOnly(event)"
+                  />
+                </div>
+              </div>
+              <div class="button-area">
+                <div class="form-check d-flex">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="Agree"
+                    checked
+                    required
+                  />
+                  <label class="form-check-label" for="Agree">
+                    We will use this number to communicate with you
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-pd-rp w-100">
+                  Continue
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--login form initial ends-->
+
+        <div id="login-otp-box" class="flex-type1 d-none">
+          <a
+            href="#"
+            class="link-back login-link-back"
+            data-previd="login-number-box"
+            >&#129044; Back</a
+          >
+          <div class="login-form-content">
+            <div class="heading-block">
+              <h2 class="section-heading">Just a small check!</h2>
+              <p>
+                We have sent the OTP to +91-9971566159
+
+                <!--<a href="javascript:void(0)" class="form-link edit-link"
+                  ><span>&#128393;</span> Edit</a
+                >-->
+              </p>
+            </div>
+
+            <form
+              id="login-form-otp"
+              class="rp-form needs-validation"
+              novalidate
+            >
+              <div class="form-fields-content">
+                <div class="form-group form-group-otp">
+                  <input
+                    type="text"
+                    id="Digit_1"
+                    name="Digit_1"
+                    class="form-control"
+                    maxlength="1"
+                  />
+                  <input
+                    type="text"
+                    id="Digit_2"
+                    name="Digit_2"
+                    class="form-control"
+                    maxlength="1"
+                  />
+                  <input
+                    type="text"
+                    id="Digit_3"
+                    name="Digit_3"
+                    class="form-control"
+                    maxlength="1"
+                  />
+                  <input
+                    type="text"
+                    id="Digit_4"
+                    name="Digit_4"
+                    class="form-control"
+                    maxlength="1"
+                  />
+                </div>
+                <a class="form-link resend-otp-link" href="javascript:void(0)"
+                  >Resend OTP</a
+                >
+              </div>
+              <div class="button-area">
+                <div class="form-check d-flex">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="Agree"
+                    checked
+                  />
+                  <label class="form-check-label" for="Agree">
+                    I Agree to Privacy policy and Terms and Conditions.
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-pd-rp w-100">
+                  Continue
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--login-form-otp ends-->
+      </div>
+    </main>
+
+    <!--Bootstrap JS-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

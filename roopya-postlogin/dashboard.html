@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!--fonts css-->
+    <link href="css/fonts.css" rel="stylesheet" />
+    <!--custom common css-->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--custom login page css-->
+    <link href="css/dashboard.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid rp-container">
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"
+          ><img src="images/logo.png" alt="logo"
+        /></a>
+      </div>
+    </header>
+    <!--header ends-->
+    <main class="main-wrapper">
+      <div class="container py-3 py-md-5">
+        <div class="row">
+          <div class="col-lg-3">
+            <nav class="navbar" id="navbarNavBox">
+              <div class="navbar-collapse" id="navbarNav">
+                <button class="btn navclose-btn">&times;</button>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-home.png" alt="" />
+                      </span>
+                      Dashboard
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-cibil.png" alt="" />
+                      </span>
+                      Credit Score
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-existing.png" alt="" />
+                      </span>
+                      Existing Loans
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-applications.png" alt="" />
+                      </span>
+                      My Applications
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-exclusive.png" alt="" />
+                      </span>
+                      Exclusive Offers
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-cards.png" alt="" />
+                      </span>
+                      Credit Cards
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="col-lg-9">
+            <div class="heading-block mb-5">
+              <h2 class="section-heading">Welcome to Roopya</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+            <section
+              class="section-cibilbox d-flex flex-column flex-md-row mb-5"
+            >
+              <div
+                class="nav flex-md-column nav-pills"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active"
+                  id="v-pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-home"
+                  aria-selected="true"
+                >
+                  <img
+                    src="images/logo-cibil.png"
+                    alt=""
+                    class="d-none d-md-inline logo-img"
+                  />
+                  <span class="d-md-none">CIBIL</span>
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-profile"
+                  aria-selected="false"
+                >
+                  <img
+                    src="images/logo-experian.png"
+                    alt=""
+                    class="d-none d-md-inline logo-img"
+                  />
+                  <span class="d-md-none">Experian</span>
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-messages-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-messages"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-messages"
+                  aria-selected="false"
+                >
+                  <img
+                    src="images/logo-equifax.png"
+                    alt=""
+                    class="d-none d-md-inline logo-img"
+                  />
+                  <span class="d-md-none">Equifax</span>
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-settings-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-settings"
+                  aria-selected="false"
+                >
+                  <img
+                    src="images/logo-crif.png"
+                    alt=""
+                    class="d-none d-md-inline logo-img"
+                  />
+                  <span class="d-md-none">Crif</span>
+                </button>
+              </div>
+              <div class="tab-content" id="v-pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-home"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-home-tab"
+                >
+                  <div class="tab-pane-content d-flex align-items-center">
+                    <div class="score-meter">
+                      <img src="images/speedometer.png" alt="" />
+                    </div>
+                    <div class="text-box">
+                      <h2 class="section-heading">
+                        What Does Excellent Credit Score Mean?
+                      </h2>
+                      <p>
+                        Yay! You are considered the best when it comes to
+                        managing your borrowings and are a darling to almost all
+                        banks! The best rates and widest range of loans & credit
+                        cards are yours for the asking.
+                      </p>
+                      <a href="#" class="btn btn-light btn-rp"
+                        >View Report Details &#10141;</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-profile"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-profile-tab"
+                >
+                  test test 2
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-messages"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-messages-tab"
+                >
+                  test test 3
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-settings"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-settings-tab"
+                >
+                  .test test 4
+                </div>
+              </div>
+            </section>
+            <section class="section-applications mb-5">
+              <div class="heading-block">
+                <h2 class="section-heading">My Applications</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing</p>
+              </div>
+              <div class="card mt-3">
+                <div class="card-body">
+                  <div class="rp-coltype-item row">
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-success"
+                        ><img src="images/icon-backpack.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Education Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-primary btn-dot">
+                        Under Process
+                      </button>
+                    </div>
+                  </div>
+                  <div class="rp-coltype-item row">
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-info"
+                        ><img src="images/icon-car.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Car Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-primary btn-dot">
+                        Under Process
+                      </button>
+                    </div>
+                  </div>
+                  <div class="rp-coltype-item row">
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-dark"
+                        ><img src="images/icon-dots.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Personal Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-secondary btn-dot">
+                        Declined
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="view-more">
+                <a href="#" class="btn btn-light btn-rp"
+                  >View Report Details ➝</a
+                >
+              </div>
+            </section>
+            <section class="section-btbox mb-5">
+              <div class="row">
+                <div class="col-md-6 flex-type1">
+                  <span class="icon-holder mb-3"
+                    ><img
+                      src="images/finance-search.png"
+                      alt=""
+                      class="img-fluid"
+                  /></span>
+                  <h2 class="section-heading mb-2">
+                    You could save upto ₹429/mo
+                  </h2>
+                  <p>
+                    Based on your profile you are eligible for lower ROI, we
+                    would suggest to do Balance Tranfer this account
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          <div class="icon-holder">
+                            <img
+                              src="images/lending-partners/bob.png"
+                              alt=""
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="text-holder">
+                            <label class="d-block"
+                              >Bank of Boroda | Consumer Loan</label
+                            >
+                            <small>Paying EMI: ₹4,029/mo</small>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="icon-holder">
+                            <img
+                              src="images/lending-partners/paysense.png"
+                              alt=""
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="text-holder">
+                            <label class="d-block">Paysense</label>
+                            <small>Eligible EMI: ₹3,433/mo</small>
+                          </div>
+                        </li>
+                      </ul>
+                      <button class="btn btn-outline-secondary btn-updown">
+                        &#129047;
+                      </button>
+                      <a href="#" class="btn btn-primary btn-rp w-100"
+                        >Request for Balance Transfer</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-offers">
+              <div class="heading-block">
+                <h2 class="section-heading">Pre Approved Offers</h2>
+                <p>Exclusive offers for you on based on your score</p>
+              </div>
+              <div class="card offer-card-box mt-4">
+                <div class="card-body">
+                  <div class="card offer-card">
+                    <div class="card-body">
+                      <div class="rp-coltype-item row">
+                        <div class="item-col item-icontext-col col-md-9">
+                          <span class="icon-holder"
+                            ><img
+                              src="images/lending-partners/moneytap.png"
+                              alt=""
+                          /></span>
+                          <div class="text-holder">
+                            <label
+                              >You have a Pre-Approved loan of ₹2,65,000</label
+                            >
+                            <ul class="list-checked">
+                              <li>Interest Rate 21%</li>
+                              <li>No Income Docs Required</li>
+                              <li>Completely Digital Process</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="item-col item-button-col col-md-3">
+                          <a href="#" class="btn btn-outline-primary btn-rp"
+                            >Instant Approval &#10141;</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card offer-card">
+                    <div class="card-body">
+                      <div class="rp-coltype-item row">
+                        <div class="item-col item-icontext-col col-md-9">
+                          <span class="icon-holder"
+                            ><img
+                              src="images/lending-partners/sbicard.png"
+                              alt=""
+                          /></span>
+                          <div class="text-holder">
+                            <label>SimplyCLICK SBI Card</label>
+                            <ul class="list-checked">
+                              <li>₹500 gift from Amazon</li>
+                              <li>10x reward-BookMyShow</li>
+                              <li>Earn 5X rewards</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="item-col item-button-col col-md-3">
+                          <a href="#" class="btn btn-outline-primary btn-rp"
+                            >Apply Now &#10141;</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container rp-container">
+        <div class="footer-top-row">
+          <div class="col-left">
+            <div class="brand-brief">
+              <a class="footer-logo" href="#">
+                <img
+                  src="images/logo-white.png"
+                  alt="footer logo"
+                  loading="lazy"
+                />
+              </a>
+
+              <p>
+                Our credit-decision making engine compares thousands of data.
+                This helps our customers choose best rates & benefits to fulfil
+                their financial goals. We continue to hustle to help you make
+                best possible financial decisions.
+              </p>
+            </div>
+            <div class="newsletter-box">
+              <h3>Newsletter</h3>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  aria-label="email address"
+                />
+                <button class="btn btn-primary" type="button">Button</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="sitemap-box">
+              <div class="row">
+                <div class="col-6">
+                  <h3>Site Maps</h3>
+                  <nav class="footer-nav">
+                    <a href="#">Personal Loan</a>
+                    <a href="#">Home Loan</a>
+                    <a href="#">Credit Cards</a>
+                    <a href="#">EMI Calculator</a>
+                  </nav>
+                </div>
+                <div class="col-6">
+                  <h3>Site Maps</h3>
+                  <nav class="footer-nav">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy &amp; Policy</a>
+                    <a href="#">Disclaimer</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!--sitemap-box ends-->
+            <nav class="social-links">
+              <a href="#"
+                ><img
+                  src="images/icon-twitter.png"
+                  alt="twitter icon"
+                  loading="lazy"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/icon-facebook.png"
+                  alt="facebook icon"
+                  loading="lazy"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/icon-linkedin.png"
+                  alt="linkedin icon"
+                  loading="lazy"
+              /></a>
+            </nav>
+          </div>
+        </div>
+        <!--footer row 1 ends-->
+        <div class="copyright-row">
+          <div class="col-12 text-center py-5">
+            &copy; 2020 Roopya India, Inc. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Bootstrap JS-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

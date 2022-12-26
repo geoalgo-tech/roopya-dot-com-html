@@ -1,0 +1,22 @@
+/* header css */
+header{
+    border-bottom: 0.1rem solid #CBD4E1;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;  
+    .navbar-toggler{
+        border:0 none;
+        box-shadow: 0 0 0 ;
+    }
+    .navbar-toggler-icon{
+        background-image: url('/images/hamburger.png');
+    }
+}
+
+
+@media (max-width:991px){
+    header{
+        padding-top:1.0rem;
+        padding-bottom: 1.0rem;
+    }
+    
+}

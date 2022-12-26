@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!--fonts css-->
+    <link href="css/fonts.css" rel="stylesheet" />
+    <!--custom common css-->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--custom login page css-->
+    <link href="css/loginpage.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid rp-container">
+        <a class="navbar-brand" href="#"
+          ><img src="images/logo.png" alt="logo"
+        /></a>
+      </div>
+    </header>
+    <!--header ends-->
+    <main class="login-wrapper">
+      <div class="col-left rp-container flex-type1">
+        <div class="heading-block">
+          <h2 class="section-heading">Welcome to Roopya</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <ul>
+          <li>
+            <span class="icon-holder"
+              ><img src="images/icon-cibil.png" alt="" /></span
+            ><label>Credit Score</label>
+          </li>
+          <li>
+            <span class="icon-holder"
+              ><img src="images/icon-rupee.png" alt="" /></span
+            ><label>Pre-qualified Offers</label>
+          </li>
+          <li>
+            <span class="icon-holder"
+              ><img src="images/icon-eligibility.png" alt="" /></span
+            ><label>Loan amount eligibility</label>
+          </li>
+          <li>
+            <span class="icon-holder"
+              ><img src="images/icon-switch.png" alt="" /></span
+            ><label>100% Digital Process</label>
+          </li>
+        </ul>
+        <img class="cibil-main img-fluid" src="images/cibil-man.png" alt="" />
+      </div>
+      <div class="col-right rp-container">
+        <div id="register-form-step-1" class="flex-type1 d-none">
+          <a
+            href="javascript:history.back()"
+            class="link-back register-link-back"
+            >&#129044; Back</a
+          >
+          <div class="login-form-content">
+            <div class="heading-block">
+              <p class="mb-2">STEP 1/3</p>
+              <h2 class="section-heading">Enter Individual Details!</h2>
+            </div>
+
+            <form
+              id="register-form"
+              class="rp-form needs-validation"
+              novalidate
+            >
+              <div class="form-fields-content register-fields-content">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="Fullname" class="form-label"
+                        >Full Name (As per PAN Card)</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Fullname"
+                        name="Fullname"
+                        required
+                        placeholder="Enter Full Name"
+                        maxlength="100"
+                        onkeypress="return charOnly(event)"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="PanNo" class="form-label">PAN Card</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="PanNo"
+                        name="PanNo"
+                        maxlength="10"
+                        pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+                        required
+                        placeholder="Enter PAN card Number"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="DOB" class="form-label">Date of Birth </label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="DOB"
+                        name="DOB"
+                        required
+                        placeholder="dd-mmm-yyyy"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="EmailId" class="form-label"
+                        >Enter email ID</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="EmailId"
+                        name="EmailId"
+                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                        required
+                        placeholder="Enter email ID"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="Gender" class="form-label">Gender</label>
+                      <div class="form-option-fields">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="Gender"
+                            id="male"
+                            value="male"
+                            required
+                          />
+                          <label class="form-check-label" for="male"
+                            >Male</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="Gender"
+                            id="female"
+                            value="female"
+                          />
+                          <label class="form-check-label" for="female"
+                            >Female</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+              </div>
+              <div class="button-area">
+                <div class="form-check d-flex">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="Agree"
+                    required
+                    checked
+                  />
+                  <label class="form-check-label" for="Agree">
+                    I Agree to Privacy policy and Terms and Conditions.
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-pd-rp w-100">
+                  Continue
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--registr form step 1 ends-->
+
+        <div id="register-form-step-2" class="flex-type1 d-none">
+          <a
+            href="#"
+            class="link-back register-link-back"
+            data-previd="register-form-step-1"
+            >&#129044; Back</a
+          >
+          <div class="login-form-content">
+            <div class="heading-block">
+              <p class="mb-2">STEP 2/3</p>
+              <h2 class="section-heading">Enter communication Details</h2>
+            </div>
+
+            <form
+              id="register-form-communication"
+              class="rp-form needs-validation"
+              novalidate
+            >
+              <div class="form-fields-content register-fields-content">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="Address1" class="form-label"
+                        >Enter Address line 1</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Address1"
+                        name="Address1"
+                        maxlength="100"
+                        required
+                        placeholder="Address line 1"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="Address2" class="form-label"
+                        >Enter Current Address line 2</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Address2"
+                        name="Address2"
+                        maxlength="100"
+                        placeholder="Address line 2"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="Pincode" class="form-label"
+                        >Enter PIN Code</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Pincode"
+                        name="Pincode"
+                        maxlength="6"
+                        required
+                        placeholder="Address PIN Code"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="City" class="form-label">City</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="City"
+                        name="City"
+                        maxlength="50"
+                        required
+                        placeholder="City Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="State" class="form-label">State</label>
+                      <select
+                        class="form-select form-control"
+                        aria-label="select state"
+                        name="State"
+                        required
+                      >
+                        <option value="" selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+              </div>
+              <div class="button-area">
+                <div class="form-check d-flex">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="Agree"
+                    required
+                    checked
+                  />
+                  <label class="form-check-label" for="Agree">
+                    I Agree to Privacy policy and Terms and Conditions.
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-pd-rp w-100">
+                  Continue
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--register form step 2 ends-->
+
+        <div id="register-form-step-3" class="flex-type1">
+          <a
+            href="#"
+            class="link-back register-link-back"
+            data-previd="register-form-step-2"
+            >&#129044; Back</a
+          >
+          <div class="login-form-content">
+            <div class="heading-block">
+              <p class="mb-2">STEP 3/3</p>
+              <h2 class="section-heading">Register Occupation Details</h2>
+            </div>
+
+            <form
+              id="register-form-occupation"
+              class="rp-form needs-validation"
+              novalidate
+            >
+              <div class="form-fields-content register-fields-content">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="CompanyName" class="form-label"
+                        >Company Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="CompanyName"
+                        name="CompanyName"
+                        maxlength="100"
+                        required
+                        placeholder="Enter company name"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="OfficePincode" class="form-label"
+                        >Office PIN Code</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="OfficePincode"
+                        name="OfficePincode"
+                        maxlength="6"
+                        onkeypress="return numberOnly(event)"
+                        required
+                        placeholder="Office PIN Code"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="MonthlyIncome" class="form-label"
+                        >Monthly Income</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="MonthlyIncome"
+                        name="MonthlyIncome"
+                        onkeypress="return numberOnly(event)"
+                        maxlength="10"
+                        required
+                        placeholder="Please enter monthly income"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+                <!--row ends-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="EmploymentType" class="form-label"
+                        >Employment Type</label
+                      >
+                      <div class="form-option-fields">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="EmploymentType"
+                            id="Salaried"
+                            value="Salaried"
+                            required
+                          />
+                          <label class="form-check-label" for="Salaried"
+                            >Salaried</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="EmploymentType"
+                            id="SelfEmployeed"
+                            value="SelfEmployeed"
+                          />
+                          <label class="form-check-label" for="SelfEmployeed"
+                            >Self Employeed</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--row ends-->
+              </div>
+              <div class="button-area">
+                <div class="form-check d-flex">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="Agree"
+                    checked
+                  />
+                  <label class="form-check-label" for="Agree">
+                    I Agree to Privacy policy and Terms and Conditions.
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-pd-rp w-100">
+                  Continue
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--registr form step 3 ends-->
+      </div>
+    </main>
+
+    <!--Bootstrap JS-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>
