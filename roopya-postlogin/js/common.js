@@ -50,3 +50,13 @@ navbarCloseBtn.addEventListener("click", function () {
   let navbarBox = document.querySelector("#navbarNavBox");
   navbarBox.classList.toggle("slide");
 });
+
+let percentageElem = document.querySelector(".rp-progress-circle");
+if (percentageElem) {
+  let percentageElemVal = percentageElem.getAttribute("data-percentage");
+  console.log(percentageElemVal);
+  const percentageElemStyle = {
+    background: `radial-gradient(circle closest-side, white 90%, transparent 0 0), conic-gradient(var(--circleColor) 0% ${percentageElemVal}, #ddd ${percentageElemVal} 100%)`,
+  };
+  Object.assign(percentageElem.style, percentageElemStyle);
+}

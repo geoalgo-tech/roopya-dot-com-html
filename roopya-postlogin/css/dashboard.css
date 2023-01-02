@@ -170,18 +170,18 @@
   text-transform: uppercase;
 }
 
-.section-btbox {
+.section-btbox, .section-btbox2 {
   background-color: #F6FAFF;
   padding: 24px 20px;
 }
-.section-btbox .section-heading {
+.section-btbox .section-heading, .section-btbox2 .section-heading {
   font-size: clamp(12px, 3vw, 16px);
   font-weight: 700;
 }
-.section-btbox p {
+.section-btbox p, .section-btbox2 p {
   font-size: clamp(11px, 2vw, 12px);
 }
-.section-btbox .btn.btn-updown {
+.section-btbox .btn.btn-updown, .section-btbox2 .btn.btn-updown {
   border-radius: 5px;
   width: 32px;
   height: 32px;
@@ -194,15 +194,15 @@
   top: calc(50% - 36px);
   background-color: white;
 }
-.section-btbox .list-group-item {
+.section-btbox .list-group-item, .section-btbox2 .list-group-item {
   display: flex;
   border: 0 none;
   padding: 0;
 }
-.section-btbox .list-group-item .icon-holder, .section-btbox .list-group-item .text-holder {
+.section-btbox .list-group-item .icon-holder, .section-btbox .list-group-item .text-holder, .section-btbox2 .list-group-item .icon-holder, .section-btbox2 .list-group-item .text-holder {
   padding: 15px;
 }
-.section-btbox .list-group-item .icon-holder {
+.section-btbox .list-group-item .icon-holder, .section-btbox2 .list-group-item .icon-holder {
   align-self: center;
   padding: 0;
   width: 44px;
@@ -211,10 +211,10 @@
   align-items: center;
   justify-content: center;
 }
-.section-btbox .list-group-item .text-holder label {
+.section-btbox .list-group-item .text-holder label, .section-btbox2 .list-group-item .text-holder label {
   font-weight: 600;
 }
-.section-btbox .list-group-item:before {
+.section-btbox .list-group-item:before, .section-btbox2 .list-group-item:before {
   content: "";
   width: calc(100% - 3rem);
   height: 1px;
@@ -223,7 +223,7 @@
   bottom: 0;
   left: 1.5rem;
 }
-.section-btbox .list-group-item:last-child::before {
+.section-btbox .list-group-item:last-child::before, .section-btbox2 .list-group-item:last-child::before {
   display: none;
 }
 
@@ -298,19 +298,49 @@
   letter-spacing: -0.0032em;
 }
 
-.section-youraccounts .cards-block {
+.section-youraccounts .cards-block, .section-youraccounts2 .cards-block {
   row-gap: 24px;
 }
-.section-youraccounts .rp-coltype-item {
+.section-youraccounts .cards-block-title, .section-youraccounts2 .cards-block-title {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.section-youraccounts .rp-coltype-item, .section-youraccounts2 .rp-coltype-item {
   display: flex;
   justify-content: space-between;
 }
-.section-youraccounts .item-col {
+.section-youraccounts .item-col, .section-youraccounts2 .item-col {
   padding: 0;
 }
-.section-youraccounts .item-col.item-button-col .btn {
+.section-youraccounts .item-col.item-button-col .btn, .section-youraccounts2 .item-col.item-button-col .btn {
   font-size: 10px;
   margin-left: auto;
+}
+@media (max-width: 767px) {
+  .section-youraccounts:not(.section-scroll) .cards-block, .section-youraccounts2:not(.section-scroll) .cards-block {
+    row-gap: 0;
+  }
+  .section-youraccounts:not(.section-scroll) .card, .section-youraccounts2:not(.section-scroll) .card {
+    border: 0 none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .section-youraccounts.section-scroll .cards-block, .section-youraccounts2.section-scroll .cards-block {
+    overflow: scroll;
+    flex-wrap: nowrap;
+    padding-bottom: 15px;
+  }
+}
+
+.section-youraccounts2 .card + .card {
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .section-youraccounts2 .cards-block > div + div {
+    margin-top: 24px;
+  }
+  .section-youraccounts2 .card + .card {
+    margin-top: 0;
+  }
 }
 
 .section-persoffers .offer-card {
@@ -401,6 +431,173 @@
   letter-spacing: -0.008em;
   line-height: 1.4;
   padding: 0;
+}
+
+.section-loan-brief .rp-coltype-item {
+  display: flex;
+  justify-content: space-between;
+}
+.section-loan-brief .rp-coltype-item.row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.section-paymenthistory .rp-coltype-item {
+  padding: 0;
+}
+.section-paymenthistory .item-col {
+  border: 1px solid #E2E8F0;
+  border-radius: 4px;
+  padding: 16px;
+  row-gap: 5px;
+  padding: 10px;
+  border-radius: 0;
+}
+.section-paymenthistory .item-col.alert {
+  margin: 0;
+}
+.section-paymenthistory .item-col.alert-success {
+  border-left: 2px solid #00AF54;
+}
+.section-paymenthistory .item-col.alert-danger {
+  border-left: 2px solid #F57B8A;
+}
+.section-paymenthistory .item-col label {
+  font-size: 12px;
+}
+.section-paymenthistory .item-col span {
+  color: #475569;
+}
+.section-paymenthistory .item-col .content-desktop, .section-paymenthistory .item-col .content-mobile {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.section-paymenthistory .item-col .content-mobile {
+  display: none;
+}
+.section-paymenthistory .rp-coltype-item {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+.section-paymenthistory .heading-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.section-paymenthistory .year-links .btn, .section-paymenthistory .year-options {
+  font-size: 12px;
+}
+
+.rp-progress-circle {
+  --paymentPercentage:95%;
+  --circleColor:#007036;
+  width: 88px;
+  height: 88px;
+  border-radius: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.rp-progress-circle .rp-progress-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #fff;
+  color: var(--circleColor);
+  position: relative;
+}
+.rp-progress-circle .rp-progress-inner label {
+  font-size: 16px;
+  font-weight: 700;
+}
+.rp-progress-circle .rp-progress-inner span {
+  font-size: 10px;
+}
+
+.section-payment-brief .card {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+}
+.section-payment-brief .rp-coltype-item.row {
+  border: 0 none;
+  padding: 0;
+}
+.section-payment-brief .rp-coltype-item.row + .row {
+  padding-top: 15px;
+}
+@media (max-width: 767px) {
+  .section-payment-brief .col-left {
+    justify-content: flex-start !important;
+    margin-bottom: 15px;
+  }
+  .section-payment-brief .rp-coltype-item .item-col {
+    padding: 0;
+  }
+  .section-payment-brief .rp-coltype-item:first-child label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .section-payment-brief .rp-coltype-item + .rp-coltype-item .item-col {
+    padding: 15px 0;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .section-payment-brief .rp-coltype-item + .rp-coltype-item .item-col span {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.section-btbox2 > .row {
+  align-items: center;
+}
+.section-btbox2 .flex-type2 {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  align-items: center;
+}
+
+.section-creditenquiries .heading-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.section-creditenquiries .heading-block .year-links .btn {
+  font-size: 12px;
+}
+.section-creditenquiries .rp-coltype-item {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  align-items: center;
+}
+.section-creditenquiries .rp-coltype-item > .item-col:first-child {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #E2E8F0;
+  justify-content: center;
+  align-items: center;
+}
+.section-creditenquiries .rp-coltype-item + .rp-coltype-item {
+  border-top: 1px solid #E2E8F0;
+}
+@media (max-width: 767px) {
+  .section-creditenquiries .heading-block {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 5px;
+    margin-bottom: 16px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -528,13 +725,6 @@
   .section-scorefactors .rp-coltype-item {
     min-width: 205px;
   }
-  .section-youraccounts .cards-block {
-    row-gap: 0;
-  }
-  .section-youraccounts .card {
-    border: 0 none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  }
   .section-persoffers .offer-card-box {
     overflow: scroll;
     padding-bottom: 15px;
@@ -542,5 +732,33 @@
   }
   .section-persoffers .offer-card-box > div {
     max-width: 90%;
+  }
+  .section-loan-brief .rp-coltype-item:last-child .item-col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .section-loan-brief .rp-coltype-item:last-child .item-col:last-child {
+    border-bottom: 0 none;
+  }
+  .section-paymenthistory .item-col {
+    border: 0 none !important;
+    background: none !important;
+  }
+  .section-paymenthistory .item-col .content-desktop {
+    display: none;
+  }
+  .section-paymenthistory .item-col .content-mobile {
+    display: flex;
+    align-items: center;
+  }
+  .section-paymenthistory .item-col .content-mobile .icon {
+    font-weight: 600;
+  }
+  .section-paymenthistory .form-select {
+    background-color: #F6F8FC;
+    border-radius: 6px;
   }
 }/*# sourceMappingURL=dashboard.css.map */

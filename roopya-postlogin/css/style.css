@@ -142,6 +142,12 @@ ul.list-counter li:last-child::after {
   flex-direction: column;
 }
 
+.flex-type2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .section-heading {
   font-size: clamp(18px, 3vw, 26px);
   font-weight: 700;
@@ -184,6 +190,10 @@ ul.list-counter li:last-child::after {
   -moz-column-gap: 5px;
        column-gap: 5px;
   line-height: 1;
+}
+.breadcrumb .breadcrumb-item {
+  display: flex;
+  align-items: center;
 }
 .breadcrumb .breadcrumb-item.active {
   color: #0F1A2A;
