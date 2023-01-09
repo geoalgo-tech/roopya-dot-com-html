@@ -51,6 +51,7 @@ navbarCloseBtn.addEventListener("click", function () {
   navbarBox.classList.toggle("slide");
 });
 
+// rp progress circle script
 let percentageElem = document.querySelector(".rp-progress-circle");
 if (percentageElem) {
   let percentageElemVal = percentageElem.getAttribute("data-percentage");
@@ -60,3 +61,31 @@ if (percentageElem) {
   };
   Object.assign(percentageElem.style, percentageElemStyle);
 }
+
+// filter items script
+let filterBtns = document.querySelectorAll("[data-filter-link-id]");
+let filterBtnsArr = Array.from(filterBtns);
+
+console.log(filterBtnsArr);
+filterBtnsArr.map((item, index) => {
+  item.addEventListener("click", function () {
+    //console.log(item.getAttribute("data-filter-link-id"));
+    let filterLinkParent = item.closest(".filter-item-wrapper");
+    //console.log(filterLinkParent);
+    let filterLinkId = item.getAttribute("data-filter-link-id");
+    let filterItems = filterLinkParent.querySelectorAll(
+      "[data-filter-item-id]"
+    );
+    let filterItemsArr = Array.from(filterItems);
+    filterItemsArr.map((item, index) => {
+      let filterItemId = item.getAttribute("data-filter-item-id");
+      if (filterLinkId == filterItemId) {
+        item.classList.remove("filter-item-hide");
+      } else if (filterLinkId == "all") {
+        item.classList.remove("filter-item-hide");
+      } else {
+        item.classList.add("filter-item-hide");
+      }
+    });
+  });
+});

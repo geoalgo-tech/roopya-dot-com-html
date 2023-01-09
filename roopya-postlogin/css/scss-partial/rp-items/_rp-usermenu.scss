@@ -1,0 +1,36 @@
+.user-dropdown{    
+    .dropdown-toggle{
+        font-size:13px;
+        font-weight: 600;
+        > .icon-holder{
+            width:14px;
+            height:14px;
+            img{
+                max-width:100%;
+            }
+        }
+    }
+    .dropdown-menu{
+        min-width: 290px;
+        inset:0 0 auto auto;
+        padding:8px;
+        li{
+            + li{
+                border-top: 1px solid #E2E8F0;
+            }
+        }
+    }
+    .dropdown-item{
+        padding:10px;
+        font-size:13px;
+        font-weight: 600;
+        color: #0F1A2A;
+        .icon-holder{
+            width:20px;
+            height:20px;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}

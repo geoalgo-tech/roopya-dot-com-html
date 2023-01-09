@@ -1,0 +1,202 @@
+@charset "UTF-8";
+.navbar-nav {
+  row-gap: 12px;
+}
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  padding: 15px;
+  font-size: 16px;
+  color: #27364B;
+}
+.navbar-nav .nav-link.active {
+  color: var(--rp-primary-clr);
+  background-color: #F6FAFF;
+  position: relative;
+}
+.navbar-nav .nav-link.active:before {
+  content: "›";
+  display: block;
+  position: absolute;
+  right: 15px;
+  font-size: 24px;
+}
+.navbar-nav .icon-holder {
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.navclose-btn {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: inline-block;
+    padding: 0;
+    margin-right: 15px;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: flex-start;
+    z-index: 9;
+    padding: 0;
+  }
+  .navbar.slide {
+    transform: translateX(0);
+    transition: 0.2s linear;
+  }
+  .navbar .navbar-collapse {
+    width: 100%;
+    background-color: #fff;
+    flex-grow: inherit;
+    flex-basis: auto;
+    height: 100%;
+    padding: 45px 15px;
+    position: relative;
+  }
+  .navbar .navclose-btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 40px;
+    padding: 0;
+    height: auto;
+    line-height: 1;
+    display: block;
+  }
+}
+.section-faq .accordion-item {
+  background-color: transparent;
+  border: 0 none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 15px 0;
+}
+.section-faq .accordion-item:last-child {
+  border-bottom: 0 none;
+}
+.section-faq .accordion-item .accordion-button {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.008em;
+  padding: 5px 0;
+}
+.section-faq .accordion-item .accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: transparent;
+  box-shadow: 0 0 0;
+}
+.section-faq .accordion-item .accordion-button:focus {
+  outline: none;
+  box-shadow: 0 0 0;
+}
+.section-faq .accordion-item .accordion-body {
+  font-size: 13px;
+  letter-spacing: -0.008em;
+  line-height: 1.4;
+  padding: 0;
+}
+
+.section-loan-brief .rp-coltype-item {
+  display: flex;
+  justify-content: space-between;
+}
+.section-loan-brief .rp-coltype-item.row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+@media (max-width: 767px) {
+  .section-loan-brief .rp-coltype-item:last-child .item-col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .section-loan-brief .rp-coltype-item:last-child .item-col:last-child {
+    border-bottom: 0 none;
+  }
+}
+.section-paymenthistory .rp-coltype-item {
+  padding: 0;
+}
+.section-paymenthistory .item-col {
+  border: 1px solid #E2E8F0;
+  border-radius: 4px;
+  padding: 16px;
+  row-gap: 5px;
+  padding: 10px;
+  border-radius: 0;
+}
+.section-paymenthistory .item-col.alert {
+  margin: 0;
+}
+.section-paymenthistory .item-col.alert-success {
+  border-left: 2px solid #00AF54;
+}
+.section-paymenthistory .item-col.alert-danger {
+  border-left: 2px solid #F57B8A;
+}
+.section-paymenthistory .item-col label {
+  font-size: 12px;
+}
+.section-paymenthistory .item-col span {
+  color: #475569;
+}
+.section-paymenthistory .item-col .content-desktop, .section-paymenthistory .item-col .content-mobile {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.section-paymenthistory .item-col .content-mobile {
+  display: none;
+}
+.section-paymenthistory .rp-coltype-item {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+.section-paymenthistory .heading-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+
+@media (max-width: 767px) {
+  .section-paymenthistory .item-col {
+    border: 0 none !important;
+    background: none !important;
+  }
+  .section-paymenthistory .item-col .content-desktop {
+    display: none;
+  }
+  .section-paymenthistory .item-col .content-mobile {
+    display: flex;
+    align-items: center;
+  }
+  .section-paymenthistory .item-col .content-mobile .icon {
+    font-weight: 600;
+  }
+  .section-paymenthistory .form-select {
+    background-color: #F6F8FC;
+    border-radius: 6px;
+  }
+}/*# sourceMappingURL=loan-account.css.map */

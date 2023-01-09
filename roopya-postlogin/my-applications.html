@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Applications</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!--fonts css-->
+    <link href="css/fonts.css" rel="stylesheet" />
+    <!--custom common css-->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--custom login page css-->
+    <link href="css/my-applications.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid rp-container">
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"
+          ><img src="images/logo.png" alt="logo"
+        /></a>
+      </div>
+    </header>
+    <!--header ends-->
+    <main class="main-wrapper">
+      <div class="container py-3 py-md-5">
+        <div class="row">
+          <div class="col-lg-3">
+            <nav class="navbar" id="navbarNavBox">
+              <div class="navbar-collapse" id="navbarNav">
+                <button class="btn navclose-btn">&times;</button>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-home.png" alt="" />
+                      </span>
+                      Dashboard
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-cibil.png" alt="" />
+                      </span>
+                      Credit Score
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-existing.png" alt="" />
+                      </span>
+                      Existing Loans
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-applications.png" alt="" />
+                      </span>
+                      My Applications
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-exclusive.png" alt="" />
+                      </span>
+                      Exclusive Offers
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icon-holder">
+                        <img src="images/icon-cards.png" alt="" />
+                      </span>
+                      Credit Cards
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="col-lg-9">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="dashboard.html"
+                    ><img class="icon" src="images/icon-home.png" alt="" />
+                    Dashboard</a
+                  >
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  My Applications
+                </li>
+              </ol>
+            </nav>
+            <section class="section-applications filter-item-wrapper mb-5">
+              <div class="heading-block flex-type1 w-100">
+                <div class="col-left">
+                  <h2 class="section-heading">My Application</h2>
+                  <p>Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-right overflow-auto pb-3 pb-md-0">
+                  <div class="year-links d-flex filter-links">
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-primary"
+                      data-filter-link-id="all"
+                      >All Applications</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-outline-secondary"
+                      data-filter-link-id="under_process"
+                      >Under Process</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-outline-secondary"
+                      data-filter-link-id="logged"
+                      >Logged</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-outline-secondary"
+                      data-filter-link-id="approved"
+                      >Approved</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-outline-secondary"
+                      data-filter-link-id="disbursed"
+                      >Disbursed</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-outline-secondary"
+                      data-filter-link-id="declined"
+                      >Declined</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card border-0 mt-3">
+                <div class="card-body px-0">
+                  <div
+                    class="rp-coltype-item row"
+                    data-filter-item-id="under_process"
+                  >
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-success"
+                        ><img src="images/icon-backpack.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Education Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-primary btn-dot">
+                        Under Process
+                      </button>
+                    </div>
+                  </div>
+                  <div class="rp-coltype-item row" data-filter-item-id="logged">
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-success"
+                        ><img src="images/icon-backpack.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Education Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-primary btn-dot">
+                        Logged
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="rp-coltype-item row"
+                    data-filter-item-id="under_process"
+                  >
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-info"
+                        ><img src="images/icon-car.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Car Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-primary btn-dot">
+                        Under Process
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="rp-coltype-item row"
+                    data-filter-item-id="declined"
+                  >
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-dark"
+                        ><img src="images/icon-dots.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Personal Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-danger btn-dot">
+                        Declined
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="rp-coltype-item row"
+                    data-filter-item-id="approved"
+                  >
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-dark"
+                        ><img src="images/icon-dots.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Personal Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-success btn-dot">
+                        Approved
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="rp-coltype-item row"
+                    data-filter-item-id="declined"
+                  >
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-info"
+                        ><img src="images/icon-car.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Car Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-danger btn-dot">
+                        Declined
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="rp-coltype-item row"
+                    data-filter-item-id="declined"
+                  >
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-info"
+                        ><img src="images/icon-car.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Car Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-danger btn-dot">
+                        Declined
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="rp-coltype-item row"
+                    data-filter-item-id="disbursed"
+                  >
+                    <div class="item-col item-icontext-col col-7 col-md-6">
+                      <span class="icon-holder bg-success"
+                        ><img src="images/icon-backpack.png" alt=""
+                      /></span>
+                      <div class="text-holder">
+                        <label>Education Loan</label>
+                        <span>CPTULKMCMKL21324</span>
+                      </div>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Date</span>
+                      <label>07 June 2021</label>
+                    </div>
+                    <div class="item-col item-keyval-col col-6 col-md-2">
+                      <span>Amount</span>
+                      <label>8,00,000</label>
+                    </div>
+                    <div class="item-col item-button-col col-5 col-md-2">
+                      <button class="btn btn-outline-success btn-dot">
+                        Disbursed
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container rp-container">
+        <div class="footer-top-row">
+          <div class="col-left">
+            <div class="brand-brief">
+              <a class="footer-logo" href="#">
+                <img
+                  src="images/logo-white.png"
+                  alt="footer logo"
+                  loading="lazy"
+                />
+              </a>
+
+              <p>
+                Our credit-decision making engine compares thousands of data.
+                This helps our customers choose best rates & benefits to fulfil
+                their financial goals. We continue to hustle to help you make
+                best possible financial decisions.
+              </p>
+            </div>
+            <div class="newsletter-box">
+              <h3>Newsletter</h3>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  aria-label="email address"
+                />
+                <button class="btn btn-primary" type="button">Button</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="sitemap-box">
+              <div class="row">
+                <div class="col-6">
+                  <h3>Site Maps</h3>
+                  <nav class="footer-nav">
+                    <a href="#">Personal Loan</a>
+                    <a href="#">Home Loan</a>
+                    <a href="#">Credit Cards</a>
+                    <a href="#">EMI Calculator</a>
+                  </nav>
+                </div>
+                <div class="col-6">
+                  <h3>Site Maps</h3>
+                  <nav class="footer-nav">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy &amp; Policy</a>
+                    <a href="#">Disclaimer</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!--sitemap-box ends-->
+            <nav class="social-links">
+              <a href="#"
+                ><img
+                  src="images/icon-twitter.png"
+                  alt="twitter icon"
+                  loading="lazy"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/icon-facebook.png"
+                  alt="facebook icon"
+                  loading="lazy"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/icon-linkedin.png"
+                  alt="linkedin icon"
+                  loading="lazy"
+              /></a>
+            </nav>
+          </div>
+        </div>
+        <!--footer row 1 ends-->
+        <div class="copyright-row">
+          <div class="col-12 text-center py-5">
+            &copy; 2020 Roopya India, Inc. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Bootstrap JS-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

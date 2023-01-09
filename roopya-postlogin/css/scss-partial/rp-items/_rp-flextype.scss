@@ -1,0 +1,28 @@
+.flex-type1,.flex-type-col{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.flex-type2,.flex-type-row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.flex-type-sb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:16px;
+}
+.flex-type-rsb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:16px;
+    @media (max-width:767px){
+        flex-direction: column;
+        row-gap: 5px;
+        align-items: flex-start;
+        margin-bottom: 16px;
+    }
+}

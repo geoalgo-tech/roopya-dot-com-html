@@ -128,3 +128,49 @@ $border-light_2: #f9fafb;
 		border-color:$clr-primary;
 	}
 }
+
+.btn-dot,.btn-dot:hover{
+	padding:4px 10px;
+	font-weight: 600;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	&:before{
+		content:"";
+		width:5px;
+		height:5px;
+		border-radius:5px;
+		margin-right: 5px;
+		display: inline-block;
+		background-color: inherit;
+		border-color:inherit;
+	 }
+	&.btn-outline-primary{
+		background-color: #F5FBFE;
+		color:#008CBD;
+		&:before{                       
+		   background-color: #008CBD;
+		}
+	}
+	&.btn-outline-secondary{
+		background-color: #F5FBFE;
+		color:#64748B;
+		&:before{                       
+			background: #64748B;
+		 }
+	}
+	&.btn-outline-success{
+		background-color: #F5FCF8;
+		color:#007036;
+		&:before{                       
+			background: #007036;
+		 }
+	}
+	&.btn-outline-danger{
+		background-color: #FEF4F5;
+		color:#EF233C;
+		&:before{                       
+			background: #EF233C;
+		 }
+	}
+}

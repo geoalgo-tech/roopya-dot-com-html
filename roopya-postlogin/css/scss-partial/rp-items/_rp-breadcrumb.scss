@@ -1,0 +1,23 @@
+.breadcrumb{
+    font-size: 9px;
+    color: #0F1A2A;
+    align-items: center;
+    .icon{
+       max-width: 10px; 
+    }
+    a{
+        color: #64748B;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        line-height: 1;
+    }
+    .breadcrumb-item{
+        display: flex;
+        align-items: center;
+        &.active{
+            color: #0F1A2A;
+        }
+    }
+}

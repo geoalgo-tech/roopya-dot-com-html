@@ -1,153 +1,34 @@
-/* common css */
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;    
-}
+@use 'rp-items/rp-universal';
+@use 'rp-items/rp-coltype';
+@use 'rp-items/rp-listtype';
+@use 'rp-items/rp-flextype';
+@use 'rp-items/rp-headingtype';
+@use 'rp-items/rp-piecircletype';
+@use 'rp-items/rp-usermenu';
+@use 'rp-items/rp-breadcrumb';
 
-body{
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
+.year-links .btn,.year-options{
+    font-size: 12px;
 }
-p{
-    margin-bottom: 15px;
-}
-ul{
-
-    &.list-checked-o{
-        list-style: none;
-    padding: 0;
-    margin-bottom: 40px;
-    li{
-        font-size: 16px;
-        font-weight: 500;
-        position: relative;
-        padding-left: 30px;
-        letter-spacing: -0.0124em;
-        line-height: 15px;
-        margin-bottom: 15px;
-        &:before{
-            content:"";
-            width:20px;
-            height:20px;
-            //background-color: #00AF54;
-            background-image: url('../images/icon-check.png');
-            border-radius:50%;
-            position:absolute;
-            top:-2px;
-            left: 0;
-        }
-    }
-    }
-    &.list-checked-o-2{
-        list-style: none;
-        padding: 0;
-        margin-bottom: 40px;
-    li{
-        font-size: 16px;
-        line-height: 1.4;
-        font-weight: 500;
-        position: relative;
-        padding-left: 25px;
-        letter-spacing: -0.0124em;
-        margin-bottom: 15px;
-        &:before{
-            content:"";
-            width:14px;
-            height:14px;
-            //background-color: #00AF54;
-            background-image: url('../images/icon-check-o.png');
-            border-radius:50%;
-            position:absolute;
-            top:4px;
-            left: 0;
-        }
-    }
-    }
-    &.list-checked{
-        list-style: none;
-        padding: 0;
-        margin-bottom: 40px;
-    li{
-        font-size: 16px;
-        font-weight: 500;
-        position: relative;
-        padding-left: 20px;
-        letter-spacing: -0.0124em;
-        line-height: 15px;
-        margin-bottom: 15px;
-        &:before{
-            content:"\1F5F8";
-            color: #00AF54;
-            position:absolute;
-            top:2px;
-            left: 0;
-        }
-    }
-    }
-    &.list-counter{
-        counter-reset: listCount;
-        list-style: none;
-        li{
-            position: relative;
-            padding-left:55px;
-            line-height: 1.8;
-            padding-bottom: 30px;
-            label{
-                font-weight: 600;
-            }
-            &::before{
-                counter-increment: listCount;
-                content:counter(listCount);
-                width:32px;
-                height: 32px;
-                background-color: #00AF54;
-                border-radius: 20px;
-                position: absolute;
-                left: 0;
-                top:12px;
-                color:#fff;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 1;
-                box-shadow:0 0 0 12px #fff;
-            }
-            &::after{
-                content: "";
-                width:1px;
-                background-color: #00AF54;
-                height: 100%;
-                position: absolute;
-                left:15px;
-                top:42px;
-            }            
-            &:last-child{
-                &::after{
-                    display: none;
-                }
-            }
+.year-links{
+    &.d-flex{
+        column-gap: 12px;
+        .btn{
+            white-space: nowrap;
         }
     }
 }
 
-.flex-type1{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.filter-item-wrapper{    
+    .filter-item-hide{
+        height:0;
+        visibility: hidden;
+        border: 0 none!important;
+        padding:0!important;
+        margin:0!important;
+    }
 }
-.flex-type2{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-.section-heading{
-    font-size:clamp(18px,3vw,26px);
-    font-weight: 700;
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
+
 
 .rp-container{
     padding-left:calc(var(--rp-gutter-x) * 0.75);
@@ -158,98 +39,3 @@ ul{
     }
 }
 
-.navbar-toggler{
-    display: none;
-}
-.navclose-btn{
-    display: none;
-}
-.breadcrumb{
-    font-size: 9px;
-    color: #0F1A2A;
-    align-items: center;
-    .icon{
-       max-width: 10px; 
-    }
-    a{
-        color: #64748B;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        column-gap: 5px;
-        line-height: 1;
-    }
-    .breadcrumb-item{
-        display: flex;
-        align-items: center;
-        &.active{
-            color: #0F1A2A;
-        }
-    }
-}
-@media (max-width:991px){
-    .navbar-toggler{
-        display: inline-block;
-        padding: 0;
-        margin-right: 15px;
-    }
-    .navbar{
-        position: fixed;
-        top:0;
-        left:0;
-        height:100%;
-        width:100%;
-        transform: translateX(-100%);
-        transition: 0.2s linear;
-        background-color:rgba(0,0,0,0.9);
-        align-items: flex-start;
-        z-index: 9;
-        padding: 0;
-        &.slide{
-            transform: translateX(0);
-            transition: 0.2s linear;
-        }
-        .navbar-collapse{
-            width:100%;
-            background-color: #fff;
-            flex-grow: inherit;
-            flex-basis: auto;
-            height: 100%;
-            padding:45px 15px;
-            position: relative;
-        }
-        .navclose-btn{    
-            position: absolute;
-            top: 0;
-            right: 15px;
-            font-size: 40px;
-            padding: 0;
-            height: auto;
-            line-height: 1;
-            display: block;
-        }
-        
-    }
-}
-@media (max-width:767px){
-    body{
-        font-size: 12px;
-    }       
-    .section-heading{
-        font-weight: 700;
-        letter-spacing: -0.0124em;
-        margin-bottom: 15px;
-    }
-    ul{
-        &.list-checked{
-            li{
-                font-size: 13px;
-                &::before{
-                    width:15px;
-                    height:15px;
-                    background-size: cover;
-                }
-            }
-        }
-    }
-}
